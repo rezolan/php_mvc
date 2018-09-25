@@ -28,7 +28,7 @@ class Router {
 			$controllerName = array_shift($segments) . 'Controller'; //newsController
 			$controllerName = ucfirst($controllerName); //NewsController
 
-			$actionName = 'action' . ucfirst('array_shift($segments)'); //actionList
+			$actionName = 'action' . ucfirst(array_shift($segments)); //actionList
 
 			$controllerFile = ROOT . '/controllers/' . $controllerName . '.php';
 
