@@ -13,33 +13,26 @@ class Router {
 	}
 	public function run() {
 		$uri = $this->getUri();
-
-		$uris = explode('/', $uri);
-		$routeKey = $uris[1];
-		for($i = 2; $i < count($uris); $i++) {
-			if($uris[$i]) {
-				$routeKey = $routeKey . "/" . $uris[$i];
+		$notfound = true;
+		foreach($this->routes as $uriPattern => $path){
+			if (preg_match("~$uriPattern~", $uri)){
+				$internalRoute = preg_replace("~$uriPattern~", $path, $uri);
+				$segments = explode('/', $internalRoute);
+				$controllerName = array_shift($segments) . 'Controller';
+				$controllerName = ucfirst($controllerName);
+				$actionName = 'action' . ucfirst(array_shift($segments));
+				$controllerFile = ROOT . '/controllers/' . $controllerName . '.php';
+				if (file_exists($controllerFile)) {
+					include_once($controllerFile);
+				}
+				$controllerObject = new $controllerName;
+				$result = $controllerObject->$actionName($segments);
+				$notfound = false;
+				break;
 			}
 		}
-
-		$path = $this->routes[$routeKey];
-		if($path) {
-			$segments = explode('/', $path); //['news', 'list']
-			$controllerName = array_shift($segments) . 'Controller'; //newsController
-			$controllerName = ucfirst($controllerName); //NewsController
-
-			$actionName = 'action' . ucfirst(array_shift($segments)); //actionList
-
-			$controllerFile = ROOT . '/controllers/' . $controllerName . '.php';
-
-			if (file_exists($controllerFile)) {
-				include_once($controllerFile);
-			}
-
-			$controllerObject = new $controllerName; //new NewsController
-			$result = $controllerObject->$actionName(); //$controllerObject->actionList();
-		} else {
-			echo 404;
+		if ($notfound) {
+			echo '404';
 		}
 	}
 }

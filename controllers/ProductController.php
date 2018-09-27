@@ -1,6 +1,6 @@
 <?
 class ProductController {
 	public function actionList() {
-		echo 'actionList';
+		echo 'ProductController->actionList';
 	}
 }

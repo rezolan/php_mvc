@@ -1,7 +1,6 @@
 <?
 class ArticleController {
-	public function actionIndex() {
-		echo 'actionIndex';
+	public function actionIndex($params) {
+		var_dump($params);
 	}
-
 }
