@@ -16,11 +16,11 @@ class Router {
 		$notfound = true;
 		foreach($this->routes as $uriPattern => $path){
 			if (preg_match("~$uriPattern~", $uri)){
-				$internalRoute = preg_replace("~$uriPattern~", $path, $uri);
-				$segments = explode('/', $internalRoute);
-				$controllerName = array_shift($segments) . 'Controller';
-				$controllerName = ucfirst($controllerName);
-				$actionName = 'action' . ucfirst(array_shift($segments));
+				$internalRoute = preg_replace("~$uriPattern~", $path, $uri); // 'news/list/12'
+				$segments = explode('/', $internalRoute); // [news, list, 12]
+				$controllerName = array_shift($segments) . 'Controller'; // news . Controller [list, 12]
+				$controllerName = ucfirst($controllerName); // NewsController
+				$actionName = 'action' . ucfirst(array_shift($segments)); //action . List [12]
 				$controllerFile = ROOT . '/controllers/' . $controllerName . '.php';
 				if (file_exists($controllerFile)) {
 					include_once($controllerFile);
