@@ -17,7 +17,6 @@ class ProductController {
 		if($id) {
 			$products = Product::getProductById($id);
 		}
-		$categories = Product::getCategories();
 		include ROOT.'/views/ProductItemView.php';
 	}
 }

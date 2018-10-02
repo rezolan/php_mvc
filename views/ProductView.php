@@ -13,8 +13,12 @@
 			<img src="<?=$product['img'];?>" alt="<?=$product['name']; ?>"/>
 			<h2>
 				<a href="/product/<?=$product['id']; ?>">
-					<?=$product['brand'].' '.$product['name']; ?></h2>
+					<?=$product['brand'].' '.$product['name']; ?>
 				</a>
+			</h2>
+			<h3>
+				<?=$product['category_name'];?>
+			</h3>
 			<span class="price">
 				<?=$product['price'].' $';?>
 			</span>
