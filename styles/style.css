@@ -1,3 +1,47 @@
-body {
-    background-color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    background-color: yellow;
+    padding: 20px 10px;
+}
+.header ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0 0 0;
+}
+.header li {
+    list-style-type: none;
+}
+.footer {
+    padding: 30px;
+    text-align: center;
+    background-color: gainsboro;
+}
+.container {
+    display: flex;
+    padding: 15px;
+    flex-direction: row-reverse;
+    position: relative;
+}
+.categories {
+    width: 20%;
+    position: fixed;
+    left: 30px;
+    top: 150px;
+}
+.categories li {
+    list-style-type: none;
+}
+.content {
+    width: 80%;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content article {
+    width: 33%;
+    padding: 30px 0;
 }

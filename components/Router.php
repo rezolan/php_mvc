@@ -14,6 +14,8 @@ class Router {
 	public function run() {
 		$uri = $this->getUri();
 		$notfound = true;
+		include ROOT.'/views/layouts/header.php';
+		echo '<main>';
 		foreach($this->routes as $uriPattern => $path){
 			if (preg_match("~$uriPattern~", $uri)){
 				$internalRoute = preg_replace("~$uriPattern~", $path, $uri); // 'news/list/12'
@@ -34,5 +36,7 @@ class Router {
 		if ($notfound) {
 			echo '404';
 		}
+		echo '</main>';
+		include ROOT.'/views/layouts/footer.php';
 	}
 }
