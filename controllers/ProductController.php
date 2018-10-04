@@ -18,12 +18,12 @@ class ProductController {
 			$productCount = Product::getProductCount();
 			$paginationPath = "/page-";
 		}
+		$productCount = intval($productCount);
 		$categories = Product::getCategories();
 		include ROOT.'/views/ProductView.php';
 		
 		// include ROOT.'/components/Pagination.php';
-		$itemsCount = Product::getProductCount();
-		$pagination = new Pagination($itemsCount, $countOnPage, $pageNumber, $paginationPath);
+		$pagination = new Pagination($productCount, $countOnPage, $pageNumber, $paginationPath);
 		echo $pagination->show();
 	}
 	public function actionProduct($params) {
