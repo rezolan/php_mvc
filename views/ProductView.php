@@ -3,7 +3,7 @@
 		<ul>
 			<li><a href="/">All</a></li>
 			<? foreach($categories as $cat) { ?>
-			<li><a href="<?=$cat['id'];?>"><?=$cat['name'];?></a></li>
+			<li><a href="/<?=$cat['id'];?>"><?=$cat['name'];?></a></li>
 			<?}?>
 		</ul>
 	</aside>

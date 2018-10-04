@@ -10,7 +10,27 @@ class Pagination {
 		$this->paginationPath = $paginationPath;
 	}
 	public function show() {
-		if($this->activePage > 3 AND $this->activePage < $this->lihksCount - 2) {
+		if($this->activePage >= $this->lihksCount - 2) {
+			$min = $this->lihksCount - 4;
+			$max = $this->lihksCount;	
+			$leftArrow = "<a href='".$this->paginationPath."1'>
+								<button>First</button>
+							</a>
+							<a href='".$this->paginationPath.($this->activePage-1)."'>
+								<button>Prev</button>
+							</a>";
+			$rightArrow = "";
+		} else if($this->activePage <= 3) {
+			$min = 1;
+			$max = 5;
+			$leftArrow = "";
+			$rightArrow = "<a href='".$this->paginationPath.($this->activePage+1)."'>
+								<button>Next</button>
+							</a>
+							<a href='".$this->paginationPath.$this->lihksCount."'>
+								<button>Last</button>
+							</a>";
+		} else {
 			$min = $this->activePage - 2;
 			$max = $this->activePage + 2;
 			$leftArrow = "<a href='".$this->paginationPath."1'>
@@ -25,26 +45,6 @@ class Pagination {
 							<a href='".$this->paginationPath.$this->lihksCount."'>
 								<button>Last</button>
 							</a>";
-		} else if($this->activePage <= 3) {
-			$min = 1;
-			$max = 5;
-			$leftArrow = "";
-			$rightArrow = "<a href='".$this->paginationPath.($this->activePage+1)."'>
-								<button>Next</button>
-							</a>
-							<a href='".$this->paginationPath.$this->lihksCount."'>
-								<button>Last</button>
-							</a>";
-		} else {
-			$min = $this->lihksCount - 4;
-			$max = $this->lihksCount;	
-			$leftArrow = "<a href='".$this->paginationPath."1'>
-								<button>First</button>
-							</a>
-							<a href='".$this->paginationPath.($this->activePage-1)."'>
-								<button>Prev</button>
-							</a>";
-			$rightArrow = "";
 		}
 	
 		$x = "<div class='pagination'>";
