@@ -1,5 +1,4 @@
 <?
-
 class Router {
 	private $routes;
 	public function __construct() {
@@ -24,9 +23,9 @@ class Router {
 				$controllerName = ucfirst($controllerName); // NewsController
 				$actionName = 'action' . ucfirst(array_shift($segments)); //action . List [12]
 				$controllerFile = ROOT . '/controllers/' . $controllerName . '.php';
-				if (file_exists($controllerFile)) {
-					include_once($controllerFile);
-				}
+				// if (file_exists($controllerFile)) {
+					// include_once($controllerFile);
+				// }
 				$controllerObject = new $controllerName;
 				$result = $controllerObject->$actionName($segments);
 				$notfound = false;
