@@ -45,3 +45,70 @@
     width: 33%;
     padding: 30px 0;
 }
+.pagination {
+	text-align: center;
+	padding:20px 0 10px;
+}
+.pagination button {
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	display: inline-block;
+	padding: 5px 5px;
+	margin: 0 5px;
+	position: relative;
+	color: rgba(51,51,51,.6);
+	border: 1px solid rgba(51,51,51,.6);
+	background: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor:pointer;
+}
+.pagination button.active{
+	color: rgb(51,51,51);
+}
+.pagination button.active:before,
+.pagination button.active:after{
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+}
+.pagination button:before,
+.pagination button:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	box-sizing: border-box;
+}
+.pagination button:before {
+	bottom: 0;
+	left: 0;
+	border-left: 1px solid rgb(51,51,51);
+	border-top: 1px solid rgb(51,51,51);
+	transition: 0s ease opacity .4s, .1s ease width .2s, .1s ease height .3s;
+}
+.pagination button:after {
+	top: 0;
+	right: 0;
+	border-right: 1px solid rgb(51,51,51);
+	border-bottom: 1px solid rgb(51,51,51);
+	transition: 0s ease opacity .2s, .1s ease width , .1s ease height .1s;
+}
+.pagination button:hover:before,
+.pagination button:hover:after{
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+}
+.pagination button:hover:before {transition: 0s ease opacity 0s, .1s ease height, .1s ease width .1s;}
+.pagination button:hover:after {transition: 0s ease opacity .2s, .1s ease height .2s , .1s ease width .3s;}
+.pagination button:hover {
+	background: rgba(255,255,255,.6);
+	color: rgb(51,51,51);
+}
+a{
+	text-decoration:none;
+}
