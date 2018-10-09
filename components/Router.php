@@ -4,6 +4,7 @@ class Router {
 	public function __construct() {
 		$routesPath = ROOT . '/config/routes.php';
 		$this->routes = include($routesPath);
+		session_start();
 	}
 	private function getUri() {
 		if(!empty($_SERVER['REQUEST_URI'])) {

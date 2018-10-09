@@ -16,7 +16,7 @@
 		<ul>
 			<li><a href="/">Main page</a></li>
 			<li><a href="">Blog</a></li>
-			<li><a href="">Order</a></li>
+			<li><a href="/registration">Order</a></li>
 			<li><a href="">About</a></li>
 		</ul>
 	</nav>

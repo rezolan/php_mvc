@@ -26,6 +26,28 @@ class RegistrationController {
 			}
 			
 		}
-		include ROOT.'/views/RegistrationView.php';
+		if(isset($_SESSION['name'])){
+			include ROOT.'/views/OrderView.php';
+		} else {
+			include ROOT.'/views/registration/RegistrationView.php';
+			include ROOT.'/views/registration/AutorisationView.php';
+		}
+	}
+	public function actionAutorisation() {
+		$loginEmail='';
+		$loginPassword='';
+		if(isset($_POST['submit_auto'])) {
+			$loginEmail=$_POST['email_auto'];
+			$loginPassword=$_POST['password_auto'];
+			if(Registration::checkAutorisation($loginEmail, $loginPassword)) {
+				$_SESSION['name'] = $loginEmail;
+			}
+			$this->actionRegister();
+		}
+	}
+	public function actionDestroy() {
+		unset($_SESSION['name']);
+		session_destroy();
+		$this->actionRegister();
 	}
 }
