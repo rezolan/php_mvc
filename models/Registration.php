@@ -10,15 +10,13 @@ class Registration {
 		$conn = Db::getConnection();
 		$sql = "SELECT * from user where email='$email'";
 		$result = $conn->query($sql);
-		$data = $result->fetch_all(MYSQLI_ASSOC);
-		return count($data) == 0;
+		return $result->num_rows == 0;
 	}
 	public static function checkAutorisation($email, $password) {
 		$conn = Db::getConnection();
 		$sql = "SELECT * from user where email='$email' AND password='$password'";
 		$result = $conn->query($sql);
-		$data = $result->fetch_all(MYSQLI_ASSOC);
-		return count($data) != 0;
+		return $result->num_rows > 0;
 	}
 	public static function checkLogin($login) {
 		return strlen($login) >= 2;
