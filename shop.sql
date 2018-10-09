@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 02 2018 г., 15:14
+-- Время создания: Окт 09 2018 г., 17:27
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -29,7 +29,8 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `category` (
   `id` int(12) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
@@ -56,7 +57,9 @@ INSERT INTO `category` (`id`, `name`) VALUES
 
 CREATE TABLE IF NOT EXISTS `category_product` (
   `product_id` int(12) NOT NULL,
-  `category_id` int(12) NOT NULL
+  `category_id` int(12) NOT NULL,
+  KEY `product_id` (`product_id`),
+  KEY `category_id` (`category_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1083,7 +1086,9 @@ CREATE TABLE IF NOT EXISTS `product` (
   `is_new` int(1) NOT NULL DEFAULT '0',
   `is_recomended` int(1) NOT NULL DEFAULT '0',
   `status` int(1) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`),
+  KEY `id_2` (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1001 ;
 
 --
@@ -2110,6 +2115,46 @@ INSERT INTO `product` (`id`, `name`, `code`, `price`, `is_available`, `brand`, `
 (998, 'Accord', 0, 8353, 1, 'Honda', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALCSURBVDjLjZP/SxNxGMf9B/QfiVB/ytCaoS7MDEoMYlgswi+FkzQsjNZQNKX1g0s3ZkTppuB+smJSOnOiGTa1lLHt5rZ0c05trX29fblt7+5zdJIK0cHD57mHz+t1z3P3uRwAOX/H4uJisdFoHJienl7V6/U/JiYmful0Okqr1apGNarSo/sPEpPJlMvCShZOud1uBAIBhMNhxGIxhEIhWK0WqAa7GbWySzOg6M07JPgDv3c6nchms4jH4yCSra0t+P1+pNNpZNM0GJqC0TCGp33353ufPMo7EJAnEziVSoFcDMOA3DscDgSDQU6apHeQiFqQSWxgavI1Oh83azgBCxexbWei0SgHRCIRTuL1emGz2UDq6TSDWMiGZNTKdZFio/VuY+Ze253iHBZWejwekKAoioPIzETk8/m4PJkIsQIzC7rZ/CfbYRLz8/NoaGhQ5hQUFOB/orCwAL6FZ/BONcG3rIHL5YJYLP7GCcxmM+x2OxYWFjAyMsIBZN3e3ubqJO8QnYR/qQVMZAm+GTE2l99AJBL5OQHZxENEQoLU+Lp9dhB7xjowQQ2CZhn8n6Vwjl5Fe11Z5JiABA/zdce7ZiQD40jsSJHYHUJwTQraLcP6QGnm2Ai8iKz8CLMvGxF19oHevI24uw309xug7bVYkp5O/fMlXqnIh6H/HFbHLiJMXQe9cQlxpwgxG4Hz0VNzQsodJIVCoZybm8NukP2U3nVYtr7C8mkAdl0t26oaMUcNaEqIlednsSYXwtQtQMvlU4aDkyiXy3O7ejoN42+1cO1bOYlLL2ZnHkZ4vQi05TxWVGwnk8N4NaRClbDso0AgyD30M8lkstwHD9tfNEnqmYkPOj', 'Acute slipped upper femoral epiphysis, left hip', 1, 1, 1),
 (999, 'Corolla', 1, 6870, 1, 'Toyota', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJtSURBVDjLhVPfS1NRHP/ce91wW9MZrjLLKCNxTEgcG9FLj0EgmbApPfQHBEHsL9B6CnrpRcQeQpIiWgwjlN42X3Kza7nKGEXRxFpMhVq7uz/OvZ1z5ubGpL7w5XO+536/n/M53/O9gmVZiEajd/x+/7jT6TwmSRIEQeDOvjEnhMAwDCiKUsjlco8mJiZuoGosYWpq6i3FHev/pk5PT29WiZm3MBKXy+WjIA1HH+NfNn93zG6z2brq9ziBKIocHQ4H2jwdLIZAXaTXqK5/ft/Ebi6aCJiUqkm7BUJdsSjsFVgQmgmYsUbdvubjqOs6b1oFdb5HfO08j7a2gUCsFrPuZzIZLCwswG63Y319HYlEgl+rN/0EPT9moJa2YZpmswJCKpvBYBCBQICfzNZMBdH/oDQo4ODxEfz+9gJmo4CKAoMYPJBlGfF4nCtYW1vD4uIiWhUZnq4Q2roGsf35JZwo7ENAT2QWCoUQDof5dZiCK5fOw8gn4O70gPyah7d/HEdbPiDz8KKtkcAgPFhZWUEsFuPdX12V8enVfXT2jQBlGanZORzwKGgnORhlbbiBQNO1moJIJMIJzvY6carbC3dHCab6hb6fCVJM4+SFKAxVvZW6d85da6KuaUZyaUmiKFTmgsCTn8Xp0GWYpWVaq2BotA+mtolWVxaHB8b6N5Yf3KSpk1xBsVj8mEwklVQqjXQ6jfy7OA71DMHpLsAytujjS3j9LEszTZjlLLxnToCo+vXkpN8n1E9h1ai8jYGrc92S+JUS7PD5q++75OhD/v0bZJ9PPm3Z76cxVK1VnhlVLProFh2cPbdqCIaWdeQvTLNXD529QmkAAAAASUVORK5CYII=', 'Encounter for screening for upper gastrointestinal disorder', 1, 1, 0),
 (1000, 'E250', 0, 4509, 0, 'Ford', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKISURBVDjLpZNLiM1xFMc/v//877yYMYwxjzzKW8MMG8YkMwgrLJRXFAsbj4VkUpLsJMoCCwuPokyShYRhgabbhBg3N+8xpGtct3ncedz7///v7xyLG9NEs3HqrE59zqfT+RpV5X/KGW348+GyaLylftQNRlXpaV2hKoqqLkF0uoquVdWd+VXrUFWGOm+hordV5K6KhsVKWEULp25qN0ZV6X7SqHlV68j0RHHyynBLasmvWAk5YwFBgx7SP8Kk4y/wu99RMLmR3shlpm2NGBdARYvTsZbk+LqLoILafoK+NtzipRjj4sebCRXOJ3fOdlBL4ulJxMqaPzcobXzcL8EgqBAkbhIk7iDpL6ACKOJ14cWuMfThKKjgdXegIs8B3N/HUNGsrvVBAjCCpMKYnAC16WxnPFCLEyomM5SsBHqGAVZAFcRHbYBxLJACE2DUA02DeFkjaxEr8reBZg1UA9AcIA14KB5qA9R6qAqIQa2ERgKsIOLhFMzADkTA5ILjg5O1eBTLo/X7ePqencRPCamhwh3XockZNpAzyTdXcMfVYUITMK7BuAHG9Xnw2dKeKaNheQN7tuyldnE1TORQ3b6qU38AVRueHxjsvE/yfTO55RtxCsbg5AYYd5Dbr5MsnFuLdSy1lauxJqBuQT3A3hGvrFbKBjruMdBxn1DpNow7E+MMEu9LEDJjWT9vPwAHV11gxqQagPwRgKmbXyUyqWR1b7SZ3shVrD8FzG76B7qJxsKceLALgBMtu/gUjwCkzb/S+PHS3HK1st9xxxwpmt3Iubs3eqMlRSX1NcuYVbGID10vCUda+fa577QZLc5vz0+fYP3McfEzTbu/cgzYAxQB/cD5tr', 'Contact with liquid air, sequela', 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+
+--
+-- Дамп данных таблицы `user`
+--
+
+INSERT INTO `user` (`id`, `login`, `email`, `password`) VALUES
+(1, 'qwerty', 'qw@qw.ew', '1234567890'),
+(10, '111', 'q@q.q', '1weqeqwewqeqw'),
+(11, '111', 'q@q.q1', '11231231');
+
+--
+-- Ограничения внешнего ключа сохраненных таблиц
+--
+
+--
+-- Ограничения внешнего ключа таблицы `category`
+--
+ALTER TABLE `category`
+  ADD CONSTRAINT `category_ibfk_1` FOREIGN KEY (`id`) REFERENCES `category_product` (`category_id`);
+
+--
+-- Ограничения внешнего ключа таблицы `category_product`
+--
+ALTER TABLE `category_product`
+  ADD CONSTRAINT `category_product_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
+  ADD CONSTRAINT `category_product_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+h1{
+	text-align:center;
+}
 .header {
     background-color: yellow;
     padding: 20px 10px;
@@ -112,3 +115,24 @@
 a{
 	text-decoration:none;
 }
+
+.form{
+	padding:100px;
+}
+.form form{
+	width:300px;
+	margin:auto;
+}
+.form input{
+	width:100%;
+	margin-bottom:20px;
+}
+.errors {
+	text-align:center;
+}
+	
+	
+	
+	
+	
+	
