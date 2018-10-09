@@ -1,5 +1,6 @@
 <?
 class RegistrationController {
+	private $user;
 	public function actionRegister() {
 		$name='';
 		$email='';
@@ -41,9 +42,12 @@ class RegistrationController {
 			$loginPassword=$_POST['password_auto'];
 			if(Registration::checkAutorisation($loginEmail, $loginPassword)) {
 				$_SESSION['name'] = $loginEmail;
+				$this->user = '';
+			} else {
+				$this->user = 'Access denied!Password or email is incorrect';
 			}
-			$this->actionRegister();
 		}
+		$this->actionRegister();
 	}
 	public function actionDestroy() {
 		unset($_SESSION['name']);
