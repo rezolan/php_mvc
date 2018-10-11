@@ -9,14 +9,13 @@ class AdminController {
 		}
 		if($_SESSION['admin'] === 'root') {	
 			include ROOT.'/views/admin/adminView.php';
-			
 		} else {
 			include ROOT.'/views/admin/adminFormView.php';
 		}
 		
 	}
 	public function actionAddPost() {
-		if($_POST['sub']){
+		if(isset($_POST['sub'])){
 			$postTitle = $_POST['postTitle'];
 			$postText = $_POST['postText'];
 			if(Admin::addPost($postTitle, $postText)) {
