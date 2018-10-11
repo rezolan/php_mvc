@@ -40,3 +40,11 @@ foreach($data as $post) {
 }
 ?>
 </section>
+	<? if($_SESSION['user_id']) { ?>
+		<form action="/blog/comment/<?=$blog_id;?>" method="post">
+			<textarea cols="50" rows="5" name="comment"></textarea><br>
+			<input type="submit"/>
+		</form>
+	<? } ?>
+	</div>
+</section>

@@ -13,7 +13,6 @@ class Router {
 	}
 	public function run() {
 		$uri = $this->getUri();
-		$notfound = true;
 		include ROOT.'/views/layouts/header.php';
 		echo '<main>';
 		foreach($this->routes as $uriPattern => $path){
@@ -29,13 +28,10 @@ class Router {
 				// }
 				$controllerObject = new $controllerName;
 				$result = $controllerObject->$actionName($segments);
-				$notfound = false;
 				break;
 			}
 		}
-		if ($notfound) {
-			echo '404';
-		}
+
 		echo '</main>';
 		include ROOT.'/views/layouts/footer.php';
 	}

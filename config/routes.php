@@ -1,5 +1,7 @@
 <?php
 return array(
+	'/admin/addPost' => 'admin/addPost',
+	'/admin' => 'admin/index',
 	'/blog/comment/([0-9]+)' => 'blog/addComment/$1',
 	'/blog' => 'blog/list',
 	'/exit' => 'registration/destroy',

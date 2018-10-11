@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 09 2018 г., 17:27
+-- Время создания: Окт 11 2018 г., 17:52
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -19,6 +19,73 @@ SET time_zone = "+00:00";
 --
 -- База данных: `shop`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `blog`
+--
+
+CREATE TABLE IF NOT EXISTS `blog` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `text` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+
+--
+-- Дамп данных таблицы `blog`
+--
+
+INSERT INTO `blog` (`id`, `title`, `text`) VALUES
+(1, 'Title1', 'Lorem ipsum dolor sit amet'),
+(2, 'Title2', 'lorem2'),
+(3, 'Title3', 'lorem3'),
+(4, 'Title4', 'lorem4'),
+(5, 'Title5', 'lorem5'),
+(6, 'Title6', 'lorem6'),
+(7, 'Title7', 'lorem7'),
+(8, 'Title8', 'lorem8'),
+(9, 'Title9', 'lorem9'),
+(10, 'Title10', 'lorem10'),
+(13, 'newPOST', 'vdbfgbdfbdbdf dfgdfgdf dfgdfgd dfgedfgdfb dfgdfgdfgdf dfgdfgdfgdf dfgdfgdfgdf dfgdfgdfgdfb dfgdfgdf dfgdfgd');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `blog_comment`
+--
+
+CREATE TABLE IF NOT EXISTS `blog_comment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `author_id` int(11) NOT NULL,
+  `blog_id` int(11) NOT NULL,
+  `text` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
+
+--
+-- Дамп данных таблицы `blog_comment`
+--
+
+INSERT INTO `blog_comment` (`id`, `author_id`, `blog_id`, `text`) VALUES
+(1, 1, 1, 'Comment1'),
+(2, 2, 1, 'Comment2'),
+(3, 1, 1, 'Comment3'),
+(4, 2, 10, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
+(5, 2, 9, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
+(6, 2, 8, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
+(7, 2, 7, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
+(8, 3, 7, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
+(9, 1, 7, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
+(10, 1, 1, 'text'),
+(26, 12, 1, '1111111111111111111'),
+(27, 12, 7, '222222222222222222222'),
+(28, 12, 8, '6666666666666666'),
+(35, 12, 10, 'fsgdfgdsfgd'),
+(36, 12, 10, '5555555555555555'),
+(37, 12, 13, '0000000000000'),
+(38, 12, 2, 'fdgdfgdfgdf');
 
 -- --------------------------------------------------------
 
@@ -2128,7 +2195,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Дамп данных таблицы `user`
@@ -2136,8 +2203,12 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `login`, `email`, `password`) VALUES
 (1, 'qwerty', 'qw@qw.ew', '1234567890'),
-(10, '111', 'q@q.q', '1weqeqwewqeqw'),
-(11, '111', 'q@q.q1', '11231231');
+(2, '111', 'q@q.q', '1weqeqwewqeqw'),
+(3, '111', 'q@q.q1', '11231231'),
+(12, '111111', 'w@w.w', '111111'),
+(13, 'e@e.e', 'e@e.e', '111111'),
+(14, 'q@w.e', 'q@w.e', '111111'),
+(15, 'y@y.y', 'y@y.y', '111111');
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
