@@ -16,7 +16,12 @@ class Registration {
 		$conn = Db::getConnection();
 		$sql = "SELECT * from user where email='$email' AND password='$password'";
 		$result = $conn->query($sql);
-		return $result->num_rows > 0;
+		$data = $result->fetch_all(MYSQLI_ASSOC);
+		if($result->num_rows > 0) {
+			return $data[0];
+		} else {
+			return false;
+		}
 	}
 	public static function checkLogin($login) {
 		return strlen($login) >= 2;

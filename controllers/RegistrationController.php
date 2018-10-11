@@ -27,7 +27,7 @@ class RegistrationController {
 			}
 			
 		}
-		if(isset($_SESSION['name'])){
+		if(isset($_SESSION['user_id'])){
 			include ROOT.'/views/OrderView.php';
 		} else {
 			include ROOT.'/views/registration/RegistrationView.php';
@@ -40,8 +40,9 @@ class RegistrationController {
 		if(isset($_POST['submit_auto'])) {
 			$loginEmail=$_POST['email_auto'];
 			$loginPassword=$_POST['password_auto'];
-			if(Registration::checkAutorisation($loginEmail, $loginPassword)) {
-				$_SESSION['name'] = $loginEmail;
+			$user = Registration::checkAutorisation($loginEmail, $loginPassword);
+			if($user) {
+				$_SESSION['user_id'] = $user['id'];
 				$this->user = '';
 			} else {
 				$this->user = 'Access denied!Password or email is incorrect';
@@ -50,7 +51,7 @@ class RegistrationController {
 		$this->actionRegister();
 	}
 	public function actionDestroy() {
-		unset($_SESSION['name']);
+		unset($_SESSION['user_id']);
 		session_destroy();
 		$this->actionRegister();
 	}
