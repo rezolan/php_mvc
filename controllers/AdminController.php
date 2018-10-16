@@ -16,9 +16,16 @@ class AdminController {
 	}
 	public function actionAddPost() {
 		if(isset($_POST['sub'])){
+			echo '<pre>';
+			var_dump($_FILES['userfile']);
+			echo '</pre>';
+			$userfile = array (
+				'name' => $_FILES['userfile']['name'],
+				'tmp_name' => $_FILES['userfile']['tmp_name']
+			);
 			$postTitle = $_POST['postTitle'];
 			$postText = $_POST['postText'];
-			if(Admin::addPost($postTitle, $postText)) {
+			if(Admin::addPost($postTitle, $postText, $userfile)) {
 				echo '<h1>Post has been added</h1>';
 			} else {	
 				echo '<h1>Error</h1>';

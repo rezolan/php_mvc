@@ -19,7 +19,13 @@ foreach($data as $post) {
 		?>
 			<article class="posts">
 				<h2><?=$post['title'];?></h2>
-				<p><?=$post['content'];?></p>
+				<p>
+					<?
+					if($post["img"]){
+						echo "<img src=".$post["img"].">";
+					}?>
+					<?=$post['content'];?>
+				</p>
 			</article>
 			<section  class="comments">
 				<article>

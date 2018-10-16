@@ -2,7 +2,7 @@
 class Blog {
 	public static function getBlogPosts() {
 		$conn = Db::getConnection();
-		$sql = "SELECT title, blog.text as content, author_id, email, login, blog.id as blog_id, blog_comment.text as comment
+		$sql = "SELECT title, img, blog.text as content, author_id, email, login, blog.id as blog_id, blog_comment.text as comment
 						FROM blog 
 						LEFT JOIN blog_comment ON blog.id=blog_comment.blog_id
 						LEFT JOIN user ON author_id = user.id ORDER BY blog_id";
