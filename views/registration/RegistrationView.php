@@ -8,7 +8,7 @@
 	
 	</div>
 	<? if($isRegistered) {
-		echo "<h1>You've been registered</h1>";
+		echo "<h1>Check your email to confirm registration</h1>";
 	} else { ?>
 	<form action="/registration" method="post">
 		<input type="text" name="text" placeholder="Login" value=<?=$name?>><br>

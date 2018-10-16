@@ -6,6 +6,7 @@ return array(
 	'/blog' => 'blog/list',
 	'/exit' => 'registration/destroy',
 	'/login' => 'registration/autorisation',
+	'/registration/confirm/([0-9]+)' => 'registration/confirm/$1',
 	'/registration' => 'registration/register',
 	'/product/([0-9]+)' => 'product/product/$1',
 	'/([0-9]+)/page-([0-9]+)' => 'product/index/$1/$2',

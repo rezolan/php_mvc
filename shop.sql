@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 11 2018 г., 17:52
+-- Время создания: Окт 16 2018 г., 17:21
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -30,25 +30,24 @@ CREATE TABLE IF NOT EXISTS `blog` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `text` text NOT NULL,
+  `img` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
 
 --
 -- Дамп данных таблицы `blog`
 --
 
-INSERT INTO `blog` (`id`, `title`, `text`) VALUES
-(1, 'Title1', 'Lorem ipsum dolor sit amet'),
-(2, 'Title2', 'lorem2'),
-(3, 'Title3', 'lorem3'),
-(4, 'Title4', 'lorem4'),
-(5, 'Title5', 'lorem5'),
-(6, 'Title6', 'lorem6'),
-(7, 'Title7', 'lorem7'),
-(8, 'Title8', 'lorem8'),
-(9, 'Title9', 'lorem9'),
-(10, 'Title10', 'lorem10'),
-(13, 'newPOST', 'vdbfgbdfbdbdf dfgdfgdf dfgdfgd dfgedfgdfb dfgdfgdfgdf dfgdfgdfgdf dfgdfgdfgdf dfgdfgdfgdfb dfgdfgdf dfgdfgd');
+INSERT INTO `blog` (`id`, `title`, `text`, `img`) VALUES
+(1, 'Title1', 'Lorem ipsum dolor sit amet', NULL),
+(2, 'Title2', 'lorem2', NULL),
+(3, 'Title3', 'lorem3', NULL),
+(4, 'Title4', 'lorem4', NULL),
+(5, 'Title5', 'lorem5', NULL),
+(6, 'Title6', 'lorem6', NULL),
+(7, 'Title7', 'lorem7', NULL),
+(8, 'Title8', 'lorem8', NULL),
+(41, 'cxvdsved', '\r\nПравила\r\nНовости\r\n02.10.18 UTC +03:00ВАЖНО! Аттестация авторов Text.ru\r\nСлужба поддержки\r\n\r\nЭлектронная почта\r\n  \r\nПароль\r\n \r\nЗарегистрироваться\r\nPRO-Аккаунт Забыли пароль? RU\r\nБиржа копирайтинга   Как заказать текст на бирже копирайтинга\r\nБиржа рерайтинга\r\nМагазин статей\r\nМагазин новостей\r\nУникальность текста\r\nПроверка орфографии\r\nSEO анализ\r\nСинонимы к слову\r\nУникальность сайта\r\nУникальность документа\r\nРегулярная проверка\r\nAPI уникальности\r\nПакеты символов\r\n↑\r\nSEO-копирайтинг от лучших авторов, работа копирайтером на дому\r\nОНЛАЙН-СЕРВИС ПРОВЕРКИ ТЕКСТА НА УНИКАЛЬНОСТЬ\r\n \r\nВставьте текст...\r\nВсего символов: 0  Без пробелов: 0  Количество слов: 0\r\n \r\nСервис онлайн проверки текста на уникальность Text.ru покажет процент уникальности текста. Глубокая и качественная проверка найдет дубликаты и рерайт.Бесплатное определение уникальности текстов.\r\n\r\nЭффективные алгоритмы позволили сделать проверку глубокой и точной. Автоматическая проверка орфографии подскажет, где были допущены ошибки.Расширенные возможности. При регистрации на сервисе у вас будут расширены ограничения проверки, предназначенные для гостей, и вы получите возможность проверять гораздо большее количество текстов с помощью нашего сервиса плагиат онлайн.\r\nБИРЖА КОПИРАЙТИНГА И РЕРАЙТИНГА\r\nНа бирже копирайтинга +477\r\n8\r\nИрина Ивлева\r\n \r\nПредприниматель\r\nПрограмма для работы с ЭЦП КриптоПро Срок:	~ 6 дней 2 000,00 руб.\r\n3\r\n1992896\r\n \r\nПостоянный заказчик\r\nСтатья про генподрядчика Срок:	~ 6 дней 625,00 руб.\r\n26\r\nWeb-agent\r\n \r\nКрупный бизнесмен\r\n12 текстов для карточек насосов Срок:	~ 3 дня 530,00 руб.\r\n12\r\nParadox_Digital\r\n \r\nБизнесмен\r\nСтатья про организацию и сопровождение родов в Америке Срок:	~ день 500,00 руб.\r\n1\r\nkkargapolov\r\n \r\nМелкий заказчик\r\nТребуется редактор информационных статей Срок:	~ 7 дней 500,00 руб.\r\n55\r\nГеннадий Н.\r\n \r\nОлигарх\r\nТребуются авторы для написания статей на разные темы Срок:	~ 8 часов 500,00 руб.\r\nНа бирже рерайтинга +319\r\n13\r\nProdvijenes\r\n \r\nБизнесмен\r\nНазвание статьи: Как избавиться от долгов Срок:	~ 2 дня 600,00 руб.\r\n13\r\nProdvijenes\r\n \r\nБизнесмен\r\nНазвание статьи: Как перевести деньги с карты на яндекс деньги Срок:	~ 2 дня 550,00 руб.\r\n8\r\ninfo\r\n \r\nПредприниматель\r\nТребуется перевести текст с русского на английский Срок:	~ день 500,00 руб.\r\n13\r\nyaop44\r\n \r\nБизнесмен\r\nТребуется сделать рерайт текста Как оформить визу в Хорватию Срок:	~ 4 дня 450,00 руб.\r\n19\r\nVladimir1354\r\n \r\nКрупный бизнесмен\r\nрека дунай Срок:	~ 4 дня 338,00 руб.\r\n19\r\nVladimir1354\r\n \r\nКрупный бизнесмен\r\nрека иртыш Срок:	~ 3 дня 333,00 руб.\r\nИнформация\r\nБиржа копирайтинга Text.ru — это достойный заработок для копирайтеров и возможность заказать текст у профессиональных авторов. Здесь вы можете реализовать свой творческий потенциал или приобрести уникальные статьи для нужд своего сайта.Рейтинг копирайтеров наглядно демонстрирует опыт и востребованность исполнителя на сервисе Text.ru и позволяет заказчику быстро выбрать исполнителя на свой заказ.\r\nПростота в работе. Мы приложили много усилий, чтобы работать на нашей бирже копирайтинга было максимально легко и удобно. Интуитивно понятный интерфейс, постоянное совершенствование функционала и подробный FAQ помогут в работе начинающим и обеспечат комфорт постоянным пользователям сервиса Text.ru.Гарантии и безопасность. Биржа копирайтинга Text.ru предоставляет гарантии как заказчикам, так и исполнителям. Заказчик получает качественный текст, а исполнитель — оплату за свою работу при условии отличного выполнения. Для разрешения конфликтных ситуаций предусмотрен Арбитраж.\r\nАвторы\r\n56\r\nAlinochka\r\n \r\nАкадемик\r\nОтзывы: 140 10\r\n56\r\nsakura132\r\n \r\nАкадемик\r\nОтзывы: 111 3\r\n56\r\nRogerSmit\r\n \r\nАкадемик\r\nОтзывы: 61 0\r\n56\r\nКактус\r\n \r\nАкадемик\r\nОтзывы: 163 0\r\n55\r\nНиколай 9191\r\n \r\nАкадемик\r\nОтзывы: 137 4\r\n55\r\nСергей_Павлович\r\n \r\nАкадемик\r\nОтзывы: 121 1\r\n55\r\nTamara-Tamara\r\n \r\nАкадемик\r\nОтзывы: 163 0\r\n55\r\n63Alex\r\n \r\nАкадемик\r\nОтзывы: 46 1\r\n55\r\nСветлана Королева\r\n \r\nАкадемик\r\nОтзывы: 34 0\r\n55\r\nProfffy\r\n \r\nАкадемик\r\nОтзывы: 51 0\r\n55\r\nAmbrosia*\r\n \r\nАкадемик\r\nОтзывы: 101 0\r\n55\r\nDimonpunker\r\n \r\nАкадемик\r\nОтзывы: 107 0\r\nМагазин статей Магазин новостей\r\nПоиск в магазине статей:  \r\nОтдых в Таиланде\r\n \r\n Hi-Tech 1502  Авто 918  Бизнес 2398  Дети, семья 1227  Дом и быт 4653  Культура 1148  Медицина 4330  Общество 3306  Отдых, туризм 2766  Психология 2853  Строительство 2788  Творчество 1431  Техника 1228  Другое 8486\r\n \r\nНа главную О проекте Новости Уведомления\r\nПолитика обработки персональных данных\r\n© 2018 ООО «Текст Медиа»\r\nЗаработок за рекомендации сервиса!\r\n Здесь находится аттестат нашего WM идентификатора 895300816319  www.megastock.com  ', '/files/Снимок.JPG');
 
 -- --------------------------------------------------------
 
@@ -58,34 +57,43 @@ INSERT INTO `blog` (`id`, `title`, `text`) VALUES
 
 CREATE TABLE IF NOT EXISTS `blog_comment` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `author_id` int(11) NOT NULL,
+  `author_id` varchar(255) NOT NULL,
   `blog_id` int(11) NOT NULL,
   `text` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=48 ;
 
 --
 -- Дамп данных таблицы `blog_comment`
 --
 
 INSERT INTO `blog_comment` (`id`, `author_id`, `blog_id`, `text`) VALUES
-(1, 1, 1, 'Comment1'),
-(2, 2, 1, 'Comment2'),
-(3, 1, 1, 'Comment3'),
-(4, 2, 10, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
-(5, 2, 9, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
-(6, 2, 8, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
-(7, 2, 7, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
-(8, 3, 7, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
-(9, 1, 7, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
-(10, 1, 1, 'text'),
-(26, 12, 1, '1111111111111111111'),
-(27, 12, 7, '222222222222222222222'),
-(28, 12, 8, '6666666666666666'),
-(35, 12, 10, 'fsgdfgdsfgd'),
-(36, 12, 10, '5555555555555555'),
-(37, 12, 13, '0000000000000'),
-(38, 12, 2, 'fdgdfgdfgdf');
+(1, '1539697054643768311', 1, 'Comment1'),
+(2, '1539697054643768311', 1, 'Comment2'),
+(3, '1539697054643768311', 1, 'Comment3'),
+(4, '1539697054643768311', 10, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
+(5, '1539697054643768311', 9, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
+(6, '1539697054643768311', 8, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
+(7, '1539697054643768311', 7, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
+(8, '1539697054643768311', 7, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
+(9, '1539697054643768311', 7, 'dsgfdfgdfgdfgdfgdfgdfgdfg'),
+(10, '1539697054643768311', 1, 'text'),
+(26, '1539697054643768311', 1, '1111111111111111111'),
+(27, '1539697054643768311', 7, '222222222222222222222'),
+(28, '1539697054643768311', 8, '6666666666666666'),
+(35, '1539697054643768311', 10, 'fsgdfgdsfgd'),
+(36, '1539697054643768311', 10, '5555555555555555'),
+(37, '1539697054643768311', 13, '0000000000000'),
+(38, '1539697054643768311', 2, 'fdgdfgdfgdf'),
+(39, '1539697054643768311', 1, 'dfsdfsdfsdfds dfsdfsd'),
+(40, '1539697054643768311', 2, 'dfsdfdsf'),
+(41, '1539697054643768311', 7, 'dsfdsfs'),
+(42, '1539697054643768311', 7, 'qqqqqqqqqqqqqqqqqqqqqqqqq'),
+(43, '1539697054643768311', 1, 'hfghfg'),
+(44, '1539698468661132813', 41, '988989898989898989898989989'),
+(45, '153969945064392089', 41, 'cvxcvcxvxcvxc'),
+(46, '1539699613913085938', 2, 'sdfdsfs'),
+(47, '1539699613913085938', 1, 'fddfsdfsdfdsfsdfsdfs');
 
 -- --------------------------------------------------------
 
@@ -126,7 +134,11 @@ CREATE TABLE IF NOT EXISTS `category_product` (
   `product_id` int(12) NOT NULL,
   `category_id` int(12) NOT NULL,
   KEY `product_id` (`product_id`),
-  KEY `category_id` (`category_id`)
+  KEY `category_id` (`category_id`),
+  KEY `product_id_2` (`product_id`),
+  KEY `category_id_2` (`category_id`),
+  KEY `product_id_3` (`product_id`),
+  KEY `product_id_4` (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -2190,25 +2202,27 @@ INSERT INTO `product` (`id`, `name`, `code`, `price`, `is_available`, `brand`, `
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` varchar(255) NOT NULL,
   `login` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `confirm` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `user`
 --
 
-INSERT INTO `user` (`id`, `login`, `email`, `password`) VALUES
-(1, 'qwerty', 'qw@qw.ew', '1234567890'),
-(2, '111', 'q@q.q', '1weqeqwewqeqw'),
-(3, '111', 'q@q.q1', '11231231'),
-(12, '111111', 'w@w.w', '111111'),
-(13, 'e@e.e', 'e@e.e', '111111'),
-(14, 'q@w.e', 'q@w.e', '111111'),
-(15, 'y@y.y', 'y@y.y', '111111');
+INSERT INTO `user` (`id`, `login`, `email`, `password`, `confirm`) VALUES
+('1539697054643768311', 'vddvv@vvv.vvv', 'vddvv@vvv.vvv', 'vddvv@vvv.vvv', 0),
+('1539697410825286866', 'vvv@vvv.vvvdddd', 'vvv@vvv.vvvdddd', 'vvv@vvv.vvvdddd', 1),
+('153969778863171386', 'vvv@vsssssssssvv.vvv', 'vvv@vsssssssssvv.vvv', 'vvv@vsssssssssvv.vvv', 1),
+('1539698260445983887', 'ewrwe@dsgdfgsfd.fvsdgds', 'ewrwe@dsgdfgsfd.fvsdgds', 'ewrwe@dsgdfgsfd.fvsdgds', 1),
+('1539698468661132813', 'vvv@vvv.vvvdddddddddddddd', 'vvv@vvv.vvvdddddddddddddd', 'vvv@vvv.vvvdddddddddddddd', 1),
+('153969945064392089', 'vvgfdgdfgdfgdfgdfv@vvv.vvv', 'vvgfdgdfgdfgdfgdfv@vvv.vvv', 'vvgfdgdfgdfgdfgdfv@vvv.vvv', 1),
+('1539699564969329834', 'qqq@qqq.qqq', 'qqq@qqq.qqq', 'qqq@qqq.qqq', 1),
+('1539699613913085938', 'eee@eee.eee', 'eee@eee.eee', 'eee@eee.eee', 1);
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -2224,8 +2238,8 @@ ALTER TABLE `category`
 -- Ограничения внешнего ключа таблицы `category_product`
 --
 ALTER TABLE `category_product`
-  ADD CONSTRAINT `category_product_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
-  ADD CONSTRAINT `category_product_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
+  ADD CONSTRAINT `category_product_ibfk_6` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
+  ADD CONSTRAINT `category_product_ibfk_5` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

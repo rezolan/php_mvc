@@ -23,7 +23,11 @@ class RegistrationController {
 				$errors[]='This email is allready exist';
 			}
 			if(!$errors) {
-				$isRegistered = Registration::addUser($name, $email, $password);
+				$id = time() . rand(0,1000000000);
+				$isRegistered = Registration::addUser($id, $name, $email, $password);
+//        $headers ='From: cgfdgtewadfer@gmail.com';
+
+        mail('cgfdgtewadfer@gmail.com', 'registration', "http://dbweb.ru/registration/confirm/$id");
 			}
 			
 		}
@@ -45,7 +49,7 @@ class RegistrationController {
 				$_SESSION['user_id'] = $user['id'];
 				$this->user = '';
 			} else {
-				$this->user = 'Access denied!Password or email is incorrect';
+				$this->user = 'Access denied!Password or email is incorrect! Or you did not confirm email';
 			}
 		}
 		$this->actionRegister();
@@ -54,5 +58,15 @@ class RegistrationController {
 		unset($_SESSION['user_id']);
 		session_destroy();
 		$this->actionRegister();
+	}
+	public function actionConfirm($id) {
+		$id = $id[0];
+		if(Registration::confirm($id)) {
+			echo '<br><br><br><h1>You can login using your email and password</h1><br><br><br>';
+		} else {
+			echo '<br><br><br><h1>Error! Try again!</h1><br><br><br>';
+		}
+
+
 	}
 }
