@@ -18,7 +18,15 @@ foreach($data as $post) {
 		echo '<div class="post-wrapper">';
 		?>
 			<article class="posts">
-				<h2><?=$post['title'];?></h2>
+				<h2><?=$post['title'];?>
+				<? if($_SESSION['admin'] === 'root') { ?>
+				<form action="/blog/deleteBlogItem/" method="post">
+					<button class="closer" name="close" value="<?=$post['blog_id'];?>">
+						X
+					</button>
+				</form>
+				<? } ?>
+				</h2>
 				<p>
 					<?
 					if($post["img"]){

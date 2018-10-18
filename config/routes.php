@@ -1,5 +1,6 @@
 <?php
 return array(
+	'/blog/deleteBlogItem' => 'blog/deleteBlogItem',
 	'/admin/addPost' => 'admin/addPost',
 	'/admin' => 'admin/index',
 	'/blog/comment/([0-9]+)' => 'blog/addComment/$1',

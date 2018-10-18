@@ -14,4 +14,11 @@ class Admin {
 		VALUES (NULL, '$title', '$text', '$path')";
 		return $conn->query($sql);
 	}
+	public static function deletePost($blogId) {
+		echo '$blogId', $blogId;
+		$conn = Db::getConnection();
+		$sql = "DELETE FROM  `blog` WHERE id =$blogId";
+		return $conn->query($sql);
+	}
+		
 }

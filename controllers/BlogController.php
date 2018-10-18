@@ -11,4 +11,11 @@ class BlogController {
 		}
 		$this->actionList();
 	}
+	public function actionDeleteBlogItem($blog_id) {
+		if(isset($_POST['close'])) {
+			$blog_id = intval($_POST['close']);
+			Admin::deletePost($blog_id);
+		}
+		$this->actionList();
+	}
 }
