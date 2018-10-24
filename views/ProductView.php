@@ -3,7 +3,16 @@
 		<ul>
 			<li><a href="/">All</a></li>
 			<? foreach($categories as $cat) { ?>
-			<li><a href="/<?=$cat['id'];?>"><?=$cat['name'];?></a></li>
+			<li>
+				<a href="/<?=$cat['id'];?>"><?=$cat['name'];?></a>
+					<?
+					if($subCategories[$cat['id']]){
+						echo '<ul>';
+						foreach($subCategories[$cat['id']] as $key => $sub) { ?>
+						<li style="padding-left: 10px;"><a href="/<?=$cat['id'];?>/<?=$sub['subId'];?>"><?=$sub['subName'];?></a></li>
+
+					<? } echo '</ul>'; }?>
+			</li>
 			<?}?>
 		</ul>
 	</aside>

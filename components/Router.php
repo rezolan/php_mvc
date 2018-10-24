@@ -18,6 +18,7 @@ class Router {
 		foreach($this->routes as $uriPattern => $path){
 			if (preg_match("~$uriPattern~", $uri)){
 				$internalRoute = preg_replace("~$uriPattern~", $path, $uri); // 'news/list/12'
+				echo $internalRoute;
 				$segments = explode('/', $internalRoute); // [news, list, 12]
 				$controllerName = array_shift($segments) . 'Controller'; // news . Controller [list, 12]
 				$controllerName = ucfirst($controllerName); // NewsController

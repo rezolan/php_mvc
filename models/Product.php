@@ -43,6 +43,20 @@ class Product {
 		$categories = $result->fetch_all(MYSQLI_ASSOC);
 		return $categories;
 	}
+	public static function getSubCategories() {
+  		$conn = Db::getConnection();
+  		$sql = "SELECT category.id as id, category.name as name, subcategory.id as subId, subcategory.name as subName
+  		  			FROM category
+  		  			INNER JOIN subcategory
+  		  			ON category.id = category_id";
+  		$result = $conn->query($sql);
+  		$subCategories = $result->fetch_all(MYSQLI_ASSOC);
+  		$categoryTree = array();
+  		forEach($subCategories as $subCategory) {
+  			$categoryTree[$subCategory['id']][] = $subCategory;
+  		}
+  		return $categoryTree;
+  	}
 	public static function getProductCount() {
 		$conn = Db::getConnection();
 		$sql = "SELECT count(*) as count FROM product";

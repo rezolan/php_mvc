@@ -1,8 +1,12 @@
 <?
 class ProductController {
 	public function actionIndex($params) {
+		echo '<pre>';
+		var_dump($params);
+		echo '</pre>';
 		$id = intval($params[0]);
-	 	$pageNumber = intval($params[1]);
+		$subId = intval($params[1]);
+	 	$pageNumber = intval($params[2]);
 	 	if(!$pageNumber){
 	 		$pageNumber = 1;
 	 	}
@@ -20,6 +24,7 @@ class ProductController {
 		}
 		$productCount = intval($productCount);
 		$categories = Product::getCategories();
+		$subCategories = Product::getSubCategories();
 		include ROOT.'/views/ProductView.php';
 		
 		// include ROOT.'/components/Pagination.php';
