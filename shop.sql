@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 16 2018 г., 17:21
+-- Время создания: Окт 24 2018 г., 18:21
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -32,22 +32,20 @@ CREATE TABLE IF NOT EXISTS `blog` (
   `text` text NOT NULL,
   `img` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=44 ;
 
 --
 -- Дамп данных таблицы `blog`
 --
 
 INSERT INTO `blog` (`id`, `title`, `text`, `img`) VALUES
-(1, 'Title1', 'Lorem ipsum dolor sit amet', NULL),
-(2, 'Title2', 'lorem2', NULL),
-(3, 'Title3', 'lorem3', NULL),
+(1, 'авпывапвыы', 'lorem1', NULL),
 (4, 'Title4', 'lorem4', NULL),
-(5, 'Title5', 'lorem5', NULL),
-(6, 'Title6', 'lorem6', NULL),
 (7, 'Title7', 'lorem7', NULL),
 (8, 'Title8', 'lorem8', NULL),
-(41, 'cxvdsved', '\r\nПравила\r\nНовости\r\n02.10.18 UTC +03:00ВАЖНО! Аттестация авторов Text.ru\r\nСлужба поддержки\r\n\r\nЭлектронная почта\r\n  \r\nПароль\r\n \r\nЗарегистрироваться\r\nPRO-Аккаунт Забыли пароль? RU\r\nБиржа копирайтинга   Как заказать текст на бирже копирайтинга\r\nБиржа рерайтинга\r\nМагазин статей\r\nМагазин новостей\r\nУникальность текста\r\nПроверка орфографии\r\nSEO анализ\r\nСинонимы к слову\r\nУникальность сайта\r\nУникальность документа\r\nРегулярная проверка\r\nAPI уникальности\r\nПакеты символов\r\n↑\r\nSEO-копирайтинг от лучших авторов, работа копирайтером на дому\r\nОНЛАЙН-СЕРВИС ПРОВЕРКИ ТЕКСТА НА УНИКАЛЬНОСТЬ\r\n \r\nВставьте текст...\r\nВсего символов: 0  Без пробелов: 0  Количество слов: 0\r\n \r\nСервис онлайн проверки текста на уникальность Text.ru покажет процент уникальности текста. Глубокая и качественная проверка найдет дубликаты и рерайт.Бесплатное определение уникальности текстов.\r\n\r\nЭффективные алгоритмы позволили сделать проверку глубокой и точной. Автоматическая проверка орфографии подскажет, где были допущены ошибки.Расширенные возможности. При регистрации на сервисе у вас будут расширены ограничения проверки, предназначенные для гостей, и вы получите возможность проверять гораздо большее количество текстов с помощью нашего сервиса плагиат онлайн.\r\nБИРЖА КОПИРАЙТИНГА И РЕРАЙТИНГА\r\nНа бирже копирайтинга +477\r\n8\r\nИрина Ивлева\r\n \r\nПредприниматель\r\nПрограмма для работы с ЭЦП КриптоПро Срок:	~ 6 дней 2 000,00 руб.\r\n3\r\n1992896\r\n \r\nПостоянный заказчик\r\nСтатья про генподрядчика Срок:	~ 6 дней 625,00 руб.\r\n26\r\nWeb-agent\r\n \r\nКрупный бизнесмен\r\n12 текстов для карточек насосов Срок:	~ 3 дня 530,00 руб.\r\n12\r\nParadox_Digital\r\n \r\nБизнесмен\r\nСтатья про организацию и сопровождение родов в Америке Срок:	~ день 500,00 руб.\r\n1\r\nkkargapolov\r\n \r\nМелкий заказчик\r\nТребуется редактор информационных статей Срок:	~ 7 дней 500,00 руб.\r\n55\r\nГеннадий Н.\r\n \r\nОлигарх\r\nТребуются авторы для написания статей на разные темы Срок:	~ 8 часов 500,00 руб.\r\nНа бирже рерайтинга +319\r\n13\r\nProdvijenes\r\n \r\nБизнесмен\r\nНазвание статьи: Как избавиться от долгов Срок:	~ 2 дня 600,00 руб.\r\n13\r\nProdvijenes\r\n \r\nБизнесмен\r\nНазвание статьи: Как перевести деньги с карты на яндекс деньги Срок:	~ 2 дня 550,00 руб.\r\n8\r\ninfo\r\n \r\nПредприниматель\r\nТребуется перевести текст с русского на английский Срок:	~ день 500,00 руб.\r\n13\r\nyaop44\r\n \r\nБизнесмен\r\nТребуется сделать рерайт текста Как оформить визу в Хорватию Срок:	~ 4 дня 450,00 руб.\r\n19\r\nVladimir1354\r\n \r\nКрупный бизнесмен\r\nрека дунай Срок:	~ 4 дня 338,00 руб.\r\n19\r\nVladimir1354\r\n \r\nКрупный бизнесмен\r\nрека иртыш Срок:	~ 3 дня 333,00 руб.\r\nИнформация\r\nБиржа копирайтинга Text.ru — это достойный заработок для копирайтеров и возможность заказать текст у профессиональных авторов. Здесь вы можете реализовать свой творческий потенциал или приобрести уникальные статьи для нужд своего сайта.Рейтинг копирайтеров наглядно демонстрирует опыт и востребованность исполнителя на сервисе Text.ru и позволяет заказчику быстро выбрать исполнителя на свой заказ.\r\nПростота в работе. Мы приложили много усилий, чтобы работать на нашей бирже копирайтинга было максимально легко и удобно. Интуитивно понятный интерфейс, постоянное совершенствование функционала и подробный FAQ помогут в работе начинающим и обеспечат комфорт постоянным пользователям сервиса Text.ru.Гарантии и безопасность. Биржа копирайтинга Text.ru предоставляет гарантии как заказчикам, так и исполнителям. Заказчик получает качественный текст, а исполнитель — оплату за свою работу при условии отличного выполнения. Для разрешения конфликтных ситуаций предусмотрен Арбитраж.\r\nАвторы\r\n56\r\nAlinochka\r\n \r\nАкадемик\r\nОтзывы: 140 10\r\n56\r\nsakura132\r\n \r\nАкадемик\r\nОтзывы: 111 3\r\n56\r\nRogerSmit\r\n \r\nАкадемик\r\nОтзывы: 61 0\r\n56\r\nКактус\r\n \r\nАкадемик\r\nОтзывы: 163 0\r\n55\r\nНиколай 9191\r\n \r\nАкадемик\r\nОтзывы: 137 4\r\n55\r\nСергей_Павлович\r\n \r\nАкадемик\r\nОтзывы: 121 1\r\n55\r\nTamara-Tamara\r\n \r\nАкадемик\r\nОтзывы: 163 0\r\n55\r\n63Alex\r\n \r\nАкадемик\r\nОтзывы: 46 1\r\n55\r\nСветлана Королева\r\n \r\nАкадемик\r\nОтзывы: 34 0\r\n55\r\nProfffy\r\n \r\nАкадемик\r\nОтзывы: 51 0\r\n55\r\nAmbrosia*\r\n \r\nАкадемик\r\nОтзывы: 101 0\r\n55\r\nDimonpunker\r\n \r\nАкадемик\r\nОтзывы: 107 0\r\nМагазин статей Магазин новостей\r\nПоиск в магазине статей:  \r\nОтдых в Таиланде\r\n \r\n Hi-Tech 1502  Авто 918  Бизнес 2398  Дети, семья 1227  Дом и быт 4653  Культура 1148  Медицина 4330  Общество 3306  Отдых, туризм 2766  Психология 2853  Строительство 2788  Творчество 1431  Техника 1228  Другое 8486\r\n \r\nНа главную О проекте Новости Уведомления\r\nПолитика обработки персональных данных\r\n© 2018 ООО «Текст Медиа»\r\nЗаработок за рекомендации сервиса!\r\n Здесь находится аттестат нашего WM идентификатора 895300816319  www.megastock.com  ', '/files/Снимок.JPG');
+(41, 'cxvdsved', '\r\nПравила\r\nНовости\r\n02.10.18 UTC +03:00ВАЖНО! Аттестация авторов Text.ru\r\nСлужба поддержки\r\n\r\nЭлектронная почта\r\n  \r\nПароль\r\n \r\nЗарегистрироваться\r\nPRO-Аккаунт Забыли пароль? RU\r\nБиржа копирайтинга   Как заказать текст на бирже копирайтинга\r\nБиржа рерайтинга\r\nМагазин статей\r\nМагазин новостей\r\nУникальность текста\r\nПроверка орфографии\r\nSEO анализ\r\nСинонимы к слову\r\nУникальность сайта\r\nУникальность документа\r\nРегулярная проверка\r\nAPI уникальности\r\nПакеты символов\r\n↑\r\nSEO-копирайтинг от лучших авторов, работа копирайтером на дому\r\nОНЛАЙН-СЕРВИС ПРОВЕРКИ ТЕКСТА НА УНИКАЛЬНОСТЬ\r\n \r\nВставьте текст...\r\nВсего символов: 0  Без пробелов: 0  Количество слов: 0\r\n \r\nСервис онлайн проверки текста на уникальность Text.ru покажет процент уникальности текста. Глубокая и качественная проверка найдет дубликаты и рерайт.Бесплатное определение уникальности текстов.\r\n\r\nЭффективные алгоритмы позволили сделать проверку глубокой и точной. Автоматическая проверка орфографии подскажет, где были допущены ошибки.Расширенные возможности. При регистрации на сервисе у вас будут расширены ограничения проверки, предназначенные для гостей, и вы получите возможность проверять гораздо большее количество текстов с помощью нашего сервиса плагиат онлайн.\r\nБИРЖА КОПИРАЙТИНГА И РЕРАЙТИНГА\r\nНа бирже копирайтинга +477\r\n8\r\nИрина Ивлева\r\n \r\nПредприниматель\r\nПрограмма для работы с ЭЦП КриптоПро Срок:	~ 6 дней 2 000,00 руб.\r\n3\r\n1992896\r\n \r\nПостоянный заказчик\r\nСтатья про генподрядчика Срок:	~ 6 дней 625,00 руб.\r\n26\r\nWeb-agent\r\n \r\nКрупный бизнесмен\r\n12 текстов для карточек насосов Срок:	~ 3 дня 530,00 руб.\r\n12\r\nParadox_Digital\r\n \r\nБизнесмен\r\nСтатья про организацию и сопровождение родов в Америке Срок:	~ день 500,00 руб.\r\n1\r\nkkargapolov\r\n \r\nМелкий заказчик\r\nТребуется редактор информационных статей Срок:	~ 7 дней 500,00 руб.\r\n55\r\nГеннадий Н.\r\n \r\nОлигарх\r\nТребуются авторы для написания статей на разные темы Срок:	~ 8 часов 500,00 руб.\r\nНа бирже рерайтинга +319\r\n13\r\nProdvijenes\r\n \r\nБизнесмен\r\nНазвание статьи: Как избавиться от долгов Срок:	~ 2 дня 600,00 руб.\r\n13\r\nProdvijenes\r\n \r\nБизнесмен\r\nНазвание статьи: Как перевести деньги с карты на яндекс деньги Срок:	~ 2 дня 550,00 руб.\r\n8\r\ninfo\r\n \r\nПредприниматель\r\nТребуется перевести текст с русского на английский Срок:	~ день 500,00 руб.\r\n13\r\nyaop44\r\n \r\nБизнесмен\r\nТребуется сделать рерайт текста Как оформить визу в Хорватию Срок:	~ 4 дня 450,00 руб.\r\n19\r\nVladimir1354\r\n \r\nКрупный бизнесмен\r\nрека дунай Срок:	~ 4 дня 338,00 руб.\r\n19\r\nVladimir1354\r\n \r\nКрупный бизнесмен\r\nрека иртыш Срок:	~ 3 дня 333,00 руб.\r\nИнформация\r\nБиржа копирайтинга Text.ru — это достойный заработок для копирайтеров и возможность заказать текст у профессиональных авторов. Здесь вы можете реализовать свой творческий потенциал или приобрести уникальные статьи для нужд своего сайта.Рейтинг копирайтеров наглядно демонстрирует опыт и востребованность исполнителя на сервисе Text.ru и позволяет заказчику быстро выбрать исполнителя на свой заказ.\r\nПростота в работе. Мы приложили много усилий, чтобы работать на нашей бирже копирайтинга было максимально легко и удобно. Интуитивно понятный интерфейс, постоянное совершенствование функционала и подробный FAQ помогут в работе начинающим и обеспечат комфорт постоянным пользователям сервиса Text.ru.Гарантии и безопасность. Биржа копирайтинга Text.ru предоставляет гарантии как заказчикам, так и исполнителям. Заказчик получает качественный текст, а исполнитель — оплату за свою работу при условии отличного выполнения. Для разрешения конфликтных ситуаций предусмотрен Арбитраж.\r\nАвторы\r\n56\r\nAlinochka\r\n \r\nАкадемик\r\nОтзывы: 140 10\r\n56\r\nsakura132\r\n \r\nАкадемик\r\nОтзывы: 111 3\r\n56\r\nRogerSmit\r\n \r\nАкадемик\r\nОтзывы: 61 0\r\n56\r\nКактус\r\n \r\nАкадемик\r\nОтзывы: 163 0\r\n55\r\nНиколай 9191\r\n \r\nАкадемик\r\nОтзывы: 137 4\r\n55\r\nСергей_Павлович\r\n \r\nАкадемик\r\nОтзывы: 121 1\r\n55\r\nTamara-Tamara\r\n \r\nАкадемик\r\nОтзывы: 163 0\r\n55\r\n63Alex\r\n \r\nАкадемик\r\nОтзывы: 46 1\r\n55\r\nСветлана Королева\r\n \r\nАкадемик\r\nОтзывы: 34 0\r\n55\r\nProfffy\r\n \r\nАкадемик\r\nОтзывы: 51 0\r\n55\r\nAmbrosia*\r\n \r\nАкадемик\r\nОтзывы: 101 0\r\n55\r\nDimonpunker\r\n \r\nАкадемик\r\nОтзывы: 107 0\r\nМагазин статей Магазин новостей\r\nПоиск в магазине статей:  \r\nОтдых в Таиланде\r\n \r\n Hi-Tech 1502  Авто 918  Бизнес 2398  Дети, семья 1227  Дом и быт 4653  Культура 1148  Медицина 4330  Общество 3306  Отдых, туризм 2766  Психология 2853  Строительство 2788  Творчество 1431  Техника 1228  Другое 8486\r\n \r\nНа главную О проекте Новости Уведомления\r\nПолитика обработки персональных данных\r\n© 2018 ООО «Текст Медиа»\r\nЗаработок за рекомендации сервиса!\r\n Здесь находится аттестат нашего WM идентификатора 895300816319  www.megastock.com  ', '/files/Снимок.JPG'),
+(42, 'fhgrhrthtrh', 'fdghdhgh fdhgdhgdhg hgfhfghgf', '/files/bird.jpg'),
+(43, 'cddgdfge', 'fdgfegefgr', '/files/bird.jpg');
 
 -- --------------------------------------------------------
 
@@ -61,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `blog_comment` (
   `blog_id` int(11) NOT NULL,
   `text` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=48 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
 
 --
 -- Дамп данных таблицы `blog_comment`
@@ -93,7 +91,8 @@ INSERT INTO `blog_comment` (`id`, `author_id`, `blog_id`, `text`) VALUES
 (44, '1539698468661132813', 41, '988989898989898989898989989'),
 (45, '153969945064392089', 41, 'cvxcvcxvxcvxc'),
 (46, '1539699613913085938', 2, 'sdfdsfs'),
-(47, '1539699613913085938', 1, 'fddfsdfsdfdsfsdfsdfs');
+(47, '1539699613913085938', 1, 'fddfsdfsdfdsfsdfsdfs'),
+(48, '1539699613913085938', 4, 'hhhhhhhhhhhhhhhh');
 
 -- --------------------------------------------------------
 
@@ -1175,7 +1174,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `code`, `price`, `is_available`, `brand`, `img`, `description`, `is_new`, `is_recomended`, `status`) VALUES
-(1, 'MDX', 5, 8299, 0, 'Acura', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJ6SURBVDjLjZNdSJNhGIa/VSQdRQcSISQeBI4R5ZrZNIO2Mj3I6CCCfinRfoR2IoJM020sp8OcoHNQassG1laNpAgdhqI2f0GoOSwTS4u22p+b29zP3ft9Wi2b1gf3yftyX8/9PM/7UQCo9fTJeERNhBWpV9//lzkc+MAoHuTfZt84gvZWhDw95DjKQGb0grvrAmLNgS91CH7T/qwO+pvR8mFu4r9aD8BEps3+uZsIfG0kMi1DDAJEww5Ma7gMZE0AHZk2M5qXMJCQ24SFKSV803mIBHoxpdqLtRP435IENb8hDEgKj+UYXOMHSHtPYClnxzVvoGdg6xcRQxXcE9nwvTuP0o4sFLalwTnGQ8gph6WSja5bPOvf+352FLaBUiw5DKQan5iPk+qFuNHOhaTzDE5rUjEp4aBbkf7mjyHS5mjYTfrsxuKcGCJdNkQPMnDtPg8FLXtQ/vQUHo00oER/Ajn126PZym0sBhD70oI2PRas+XAOcVDcngHjuBqPxxoZY8eICipTCbSva3FVl4P06oTQbhmLtVLZRSIb4bUK4TCnwjt5GAWkX9p8u0uEmpfFkL8oQlXnJUifX4GmT4Zz9w5iVyUVpAGeJWc3GRYfjoFULL7Ph/+jHGfvsPFwWAWduQ7awVq0DigI5Dqa+6Qo0uUipYKaTCqjtizv3DsIt0VIBpYL36wUZkWa62RzSjSvISkirE+MZCm3Ri60ZULdW4XL7TlIrqAmdpRRCcwMZg2CMb+9H4uzlfB/bsNQLdfZpcpsWL1ejoxlv6gVIllMjRLz5l//wnDLIfGEev/8qGqffUTJ/d7XlFUd73GRyPad4o1ILKM2xZ7/AGAf1Jkquq5mAA', 'Complete traumatic amputation of unsp foot, level unsp, subs', 0, 1, 0),
+(1, 'впвыпвапывп', 5, 8299, 0, 'Acura', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJ6SURBVDjLjZNdSJNhGIa/VSQdRQcSISQeBI4R5ZrZNIO2Mj3I6CCCfinRfoR2IoJM020sp8OcoHNQassG1laNpAgdhqI2f0GoOSwTS4u22p+b29zP3ft9Wi2b1gf3yftyX8/9PM/7UQCo9fTJeERNhBWpV9//lzkc+MAoHuTfZt84gvZWhDw95DjKQGb0grvrAmLNgS91CH7T/qwO+pvR8mFu4r9aD8BEps3+uZsIfG0kMi1DDAJEww5Ma7gMZE0AHZk2M5qXMJCQ24SFKSV803mIBHoxpdqLtRP435IENb8hDEgKj+UYXOMHSHtPYClnxzVvoGdg6xcRQxXcE9nwvTuP0o4sFLalwTnGQ8gph6WSja5bPOvf+352FLaBUiw5DKQan5iPk+qFuNHOhaTzDE5rUjEp4aBbkf7mjyHS5mjYTfrsxuKcGCJdNkQPMnDtPg8FLXtQ/vQUHo00oER/Ajn126PZym0sBhD70oI2PRas+XAOcVDcngHjuBqPxxoZY8eICipTCbSva3FVl4P06oTQbhmLtVLZRSIb4bUK4TCnwjt5GAWkX9p8u0uEmpfFkL8oQlXnJUifX4GmT4Zz9w5iVyUVpAGeJWc3GRYfjoFULL7Ph/+jHGfvsPFwWAWduQ7awVq0DigI5Dqa+6Qo0uUipYKaTCqjtizv3DsIt0VIBpYL36wUZkWa62RzSjSvISkirE+MZCm3Ri60ZULdW4XL7TlIrqAmdpRRCcwMZg2CMb+9H4uzlfB/bsNQLdfZpcpsWL1ejoxlv6gVIllMjRLz5l//wnDLIfGEev/8qGqffUTJ/d7XlFUd73GRyPad4o1ILKM2xZ7/AGAf1Jkquq5mAA', 'Complete traumatic amputation of unsp foot, level unsp, subs', 0, 1, 0),
 (2, 'RDX', 0, 3048, 0, 'Acura', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKOSURBVDjLbVLNS+JRFP3BwPwJLWY9BLMI5j+IGEmQWlSLdrPScnAVbapFRB8DUi0qIitSShIsKyJaTFL0BS5KxaKMhj5Ew5Ssnz+nyVI7885jksnpwYHLffeec959VwGglGJ7e/v7yspKbGZm5plgzNxbtf8lFhYWytxu9xNKDnMul+vDmwR/FS+EWkEAy8vLOD4+RqFQQD6fx+HhoczxjjWsfXEkCQR79l+1y8tLeDwehEIhifn5eZkrcZSVBIuLiw4BHB0dSUXC5/NhdXUVTqdTgjFzdJPL5XBwcAD2TE1NuRShlDs5OYHf70cgEJCKVC89L4729/extbWFjY0NTE5O5hRhT81kMkgkEjg7O8P5+TnE+3B6elp0xHhnZwfhcBher1ciGAxiYmJCVebm5iRBOp3G7e0tIpGItLu3t1ecAVU5RDZubm5K0O34+LjKAUoCVVVxc3ODZDKJWCwmVfm03d1d2UjLdEYnJKCAzWZTFfG3j/f399A0DfF4XD5DkKK/vx92ux29vb1YWlrC2toa+vr6ZM5qtXKAGBoayiqzs7NeskejUaRSKYyMjPAC19fXkowDY8PAwIB0xBxdscZsNkcV8U3vxXKYpqenf46OjqKjowMBsTidnZ2ora2FyWTC8PAw2tvbZVxTU8PG3yRpbW1NF1fS4XCUNTQ0+Hp6ep5JcHV1Bb1ej/X1dTkwvl+sOaqqqp66uro+kqC7u/vh1V5XVFR8E+waCZqamqDT6VBdXY26ujoJxiSor6//QYLm5ua7VwSfxBG2w4ODg3fiezVu29jYGFpaWtDW1iZj5sRdijWsfUVQXl7+rrKy8rPBYLgwGo2/LBbLg8BjY2PjV4', 'Nondisp fx of lateral condyle of r tibia, 7thD', 1, 1, 0),
 (3, 'Outlander', 0, 6512, 0, 'Mitsubishi', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAM9SURBVDjLdZPrS1NhHMcPREH/QC96nxURWS+iktC8bEt3skHoi95EbYk5KStqdtPGLKcuczSELnYhK0bzhpfK5nSZed1MPZtzzpq3pnN5tOY2p+fbsxMEUj3wgx9fvr8Pz+X7UACof9VwPb1juC6l2l6T/N5WJdr9P99fgqPxyCYyrLLXpczPMg/xrbcQzOukH0P6xJLBl/Gb/wsYaUpdT4Zlw/Vi55RVi5XgNLilCSy6qhGYrIO79Tw+P4/92v/soNz6JGbjGoCjKVXgaDhi/tpxA4Hvn4m0BHAswr4ejBiOImAvRsitx6JNB2fdSVge7e/su7+X5gFk+LGjgeZ8jkr4vQPwjbVgrIsYP6hhe3MOrreZ8Nvvwm/NQ9D5CMsTesx1q8C8kKBHt+dF5LLCXNCNkLcPvgEtvL0qTJnOwlmbhs57MVieswB+BzD7FtwXHcBcBiYrER5VoUu7K0yRy2JXg+PAjyEsT9ZgwXoL/v48UgpM1op5DTONgPsBOJsCfmMcZhoOYoG5i87SnSxlqznMri4RwM8RAmEArxEBRg1/VyZm6sUIj2iA0RKE2kWYa9wHj0kET3Mq2P4SfNLsYCnGIGRXeIAdWCTbne8kkHcIO7VYaEtDyCwCa4zB3EchZoxJmG6Ix3StEN+7C9FRtI2lyPv+BpAjgO1CYOoNmqu10JQUoqKiAkUFl2AlRxltFKJIdZHXim/no+aBAibV1gVq8FV8iAt/Iy/nwrK3BRW66ygrK4PH44HL5UJbWxvuqHOhU8vhGGZ4rb29nfcoTx9YoQYq45pHjZexNGVC67uXuHpFAcvgIArz5aBpMWQyGbRaLXJzc/meFouRf/4ED7l08V', 'Dislocation of unspecified scapula, initial encounter', 1, 0, 1),
 (4, 'S2000', 0, 2626, 0, 'Honda', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHBSURBVDjLlVM9aMJQEP6eNEF0sbiUouLgoLRkKXS1IG4dC6Xg2LXQRXATHbqVzq4iQjc3sVscnUSnYIdIB9GC4L/xL333IEFsBj04jpf77nt3l+8x0zRxaMViMbTdbtXVahVer9dYLBY/0+k0mcvltEPsGRzMMIyPQCAQ9ng8IAJd14OdTuedp+4PsS4ngslkctFoNNBsNgWB2+3GaDQKOWEdCTgY2WyW9Xo9QbBcLoUfTSDLsoiMMUFgkRxNwHeAdDpt+nw+8EUKp29O5rhEvnEoigJJktBqteD3+0/rgINNulHTNCjzGR5++1Bvb67x+vLF/dmxg3K5HOZB2+12MncxfzAYxJ25wcXjE5ixZCu9m/wufybfUqnLUqmUtwmomAtKi0ajcrVaxWAwQKFQEHOfK1dQajUwrwdSrw8ZEiKRSC4ej0NV1TwjJXI2IxaLyZwA4/FYFHL12T6fz+3o9XrhcrmQyWTQbreZ6IAnZS5dVCoVEpFYmFVEPpvNxJm+0zmRSIhoj0AJunU4HNogq3C/EwtHuqBfaxNQkhJ8NpGwAPtxs9n8c5ug2+2iXq/bojl0S41URKPuv2Dm9JxPsT8W0mO2IJm2EgAAAABJRU5ErkJggg==', 'Steroid responder, right eye', 0, 1, 0),
@@ -2198,6 +2197,31 @@ INSERT INTO `product` (`id`, `name`, `code`, `price`, `is_available`, `brand`, `
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `subcategory`
+--
+
+CREATE TABLE IF NOT EXISTS `subcategory` (
+  `id` int(12) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `category_id` int(12) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Дамп данных таблицы `subcategory`
+--
+
+INSERT INTO `subcategory` (`id`, `name`, `category_id`) VALUES
+(1, 'subSedan1', 1),
+(2, 'subSedan2', 1),
+(3, 'subCupe1', 2),
+(4, 'subCupe2', 2),
+(5, 'subHatch1', 3),
+(6, 'subHatch2', 3);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `user`
 --
 
@@ -2215,14 +2239,18 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `login`, `email`, `password`, `confirm`) VALUES
-('1539697054643768311', 'vddvv@vvv.vvv', 'vddvv@vvv.vvv', 'vddvv@vvv.vvv', 0),
+('1539697054643768311', 'vddvv@vvv.vvv', 'vddvv@vvv.vvv', 'vddvv@vvv.vvv', 1),
 ('1539697410825286866', 'vvv@vvv.vvvdddd', 'vvv@vvv.vvvdddd', 'vvv@vvv.vvvdddd', 1),
 ('153969778863171386', 'vvv@vsssssssssvv.vvv', 'vvv@vsssssssssvv.vvv', 'vvv@vsssssssssvv.vvv', 1),
 ('1539698260445983887', 'ewrwe@dsgdfgsfd.fvsdgds', 'ewrwe@dsgdfgsfd.fvsdgds', 'ewrwe@dsgdfgsfd.fvsdgds', 1),
 ('1539698468661132813', 'vvv@vvv.vvvdddddddddddddd', 'vvv@vvv.vvvdddddddddddddd', 'vvv@vvv.vvvdddddddddddddd', 1),
 ('153969945064392089', 'vvgfdgdfgdfgdfgdfv@vvv.vvv', 'vvgfdgdfgdfgdfgdfv@vvv.vvv', 'vvgfdgdfgdfgdfgdfv@vvv.vvv', 1),
 ('1539699564969329834', 'qqq@qqq.qqq', 'qqq@qqq.qqq', 'qqq@qqq.qqq', 1),
-('1539699613913085938', 'eee@eee.eee', 'eee@eee.eee', 'eee@eee.eee', 1);
+('1539699613913085938', 'eee@eee.eee', 'eee@eee.eee', 'eee@eee.eee', 1),
+('1539707803454162598', 'qweqweqw@bgfbhfghf.fdgdfgfd', 'qweqweqw@bgfbhfghf.fdgdfgfd', 'qweqweqw@bgfbhfghf.fdgdfgfd', 1),
+('1539708359244781494', 'email@mail.mail', 'email@mail.mail', 'email@mail.mail', 0),
+('1539708586814727784', 'sfgdsfsdgds@fsdfds.dfsdfs', 'sfgdsfsdgds@fsdfds.dfsdfs', 'sfgdsfsdgds@fsdfds.dfsdfs', 0),
+('1539708784775695801', 'dfsdfs@jhjhg.asdas', 'dfsdfs@jhjhg.asdas', 'dfsdfs@jhjhg.asdas', 0);
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -2238,8 +2266,8 @@ ALTER TABLE `category`
 -- Ограничения внешнего ключа таблицы `category_product`
 --
 ALTER TABLE `category_product`
-  ADD CONSTRAINT `category_product_ibfk_6` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
-  ADD CONSTRAINT `category_product_ibfk_5` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
+  ADD CONSTRAINT `category_product_ibfk_5` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
+  ADD CONSTRAINT `category_product_ibfk_6` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
